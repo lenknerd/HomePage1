@@ -7,6 +7,9 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
+// Where to publish things when all done...
+var pubRoot = '/var/www/lenknerd2.com/Serve/';
+
 // Set the banner content
 var banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
@@ -36,6 +39,7 @@ gulp.task('minify-css', ['less'], function() {
         .pipe(browserSync.reload({
             stream: true
         }))
+        .pipe(gulp.dest(pubRoot + 'css'));
 });
 
 // Minify JS
@@ -48,15 +52,14 @@ gulp.task('minify-js', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
+        .pipe(gulp.dest(pubRoot + 'js'));
 });
 
 // Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', function() {
-    gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
-        .pipe(gulp.dest('vendor/bootstrap'))
+    gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map']).pipe(gulp.dest(pubRoot + 'vendor/bootstrap'));
 
-    gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('vendor/jquery'))
+    gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js']).pipe(gulp.dest(pubRoot + 'vendor/jquery'));
 
     gulp.src([
             'node_modules/font-awesome/**',
@@ -65,22 +68,23 @@ gulp.task('copy', function() {
             '!node_modules/font-awesome/*.txt',
             '!node_modules/font-awesome/*.md',
             '!node_modules/font-awesome/*.json'
-        ])
-        .pipe(gulp.dest('vendor/font-awesome'))
+        ]).pipe(gulp.dest(pubRoot + 'vendor/font-awesome'));
 });
 
-// Publish to /var/www
+// Publish any other non-processed files to apache directory
 gulp.task('publ', function() {
 
-	var pubRoot = '/var/www/lenknerd2.com/Serve/';
-	gulp.src(['index.html', 'about.html', 'contact.html','post.html'])
+	gulp.src(['index.html', 'about.html', 'contact.html'])
 		.pipe(gulp.dest(pubRoot));
 
-	gulp.src('vendor/bootstrap/css/*.min.*').pipe(gulp.dest(pubRoot + 'vendor/bootstrap/css'));
-	gulp.src('vendor/bootstrap/js/*.min.*').pipe(gulp.dest(pubRoot + 'vendor/bootstrap/js'));
-	gulp.src('vendor/bootstrap/fonts/*').pipe(gulp.dest(pubRoot + 'vendor/bootstrap/fonts'));
-	
+	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js'])
+		.pipe(gulp.dest(pubRoot + 'js'));
 
+	gulp.src('posts/*')
+		.pipe(gulp.dest(pubRoot));
+
+	gulp.src('img/*')
+		.pipe(gulp.dest(pubRoot + 'img'));
 });
 
 // Run everything

@@ -1,6 +1,9 @@
 #!/bin/bash
-# Script to sync development archive here with actual served content
+# Script to do minification and processing, publish - runs gulpfile to do that. Sudo this.
 # David Lenkner, 2017
 
+# Go to where this script is
 cd "$( dirname "${BASH_SOURCE[0]}" )"
-rsync -rvu ./Serve /var/www/lenknerd2.com/
+# Go in one to the gulpfile directory, run it
+cd Serve
+gulp

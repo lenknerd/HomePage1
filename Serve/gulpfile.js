@@ -7,7 +7,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
-var postPages = require('./ppg-compiler.js');
+var postPages = require('./js/ppg-compiler.js');
 
 // Where to publish things when all done...
 var pubRoot = '/var/www/lenknerd2.com/Serve/';

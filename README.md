@@ -30,6 +30,12 @@ Create markdown pages for each blog post, js at top defining "PostInfo" instance
 
 For each post include an identically-named .js with instance of the PostInfo corresponding.  Can read it in gulp.
 
+Also, for each post, an identically-named folder with supporting files (mostly img).  These can copy to the /img or other root dir for serve, but should be divided up in dev.
+
+### Header Image and Text from JS
+
+Instead of hard-coded image source and text in the header, should load from js objects defined per post or page.  Order matters here... probably define js objects ahead of header insert.
+
 ### Write PostProcessor
 
 As part of gulp tasks, server JS to;

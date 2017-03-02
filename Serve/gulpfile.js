@@ -8,6 +8,7 @@ var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
 var postPages = require('./js/ppg-compiler.js');
+var pageFrameInj  = require('./js/pageframe-inject.js');
 
 // Where to publish things when all done...
 var pubRoot = '/var/www/lenknerd2.com/Serve/';
@@ -81,7 +82,7 @@ gulp.task('copy', function() {
 // Publish any other non-processed files to apache directory (wait until posts done)
 gulp.task('publ', ['pagepostprocess'], function() {
 
-	gulp.src(['index.html', 'about.html', 'contact.html'])
+	pageFrameInj.injectHeaderFooter(['index.html', 'about.html', 'contact.html'])	
 		.pipe(gulp.dest(pubRoot));
 
 	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js'])

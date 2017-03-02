@@ -7,8 +7,15 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
+var postPages = require('./ppg-compiler.js');
+
 // Where to publish things when all done...
 var pubRoot = '/var/www/lenknerd2.com/Serve/';
+
+// Task for processing the posts and making the pages
+gulp.task('pagepostprocess', function() {
+	return postPages.runTaskAndReturnPipe();
+});
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -71,8 +78,8 @@ gulp.task('copy', function() {
         ]).pipe(gulp.dest(pubRoot + 'vendor/font-awesome'));
 });
 
-// Publish any other non-processed files to apache directory
-gulp.task('publ', function() {
+// Publish any other non-processed files to apache directory (wait until posts done)
+gulp.task('publ', ['pagepostprocess'], function() {
 
 	gulp.src(['index.html', 'about.html', 'contact.html'])
 		.pipe(gulp.dest(pubRoot));
@@ -80,8 +87,8 @@ gulp.task('publ', function() {
 	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js'])
 		.pipe(gulp.dest(pubRoot + 'js'));
 
-	gulp.src('posts/*')
-		.pipe(gulp.dest(pubRoot));
+	gulp.src('posts/*.html')
+		.pipe(gulp.dest(pubRoot + 'posts'));
 
 	gulp.src('php/*')
 		.pipe(gulp.dest(pubRoot + 'php'));
@@ -91,7 +98,7 @@ gulp.task('publ', function() {
 });
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy', 'publ']);
+gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy', 'pagepostprocess', 'publ']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {

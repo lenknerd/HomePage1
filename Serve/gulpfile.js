@@ -83,6 +83,9 @@ gulp.task('publ', function() {
 	gulp.src('posts/*')
 		.pipe(gulp.dest(pubRoot));
 
+	gulp.src('php/*')
+		.pipe(gulp.dest(pubRoot + 'php'));
+
 	gulp.src('img/*')
 		.pipe(gulp.dest(pubRoot + 'img'));
 });

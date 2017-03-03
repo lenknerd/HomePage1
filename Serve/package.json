@@ -21,7 +21,8 @@
     "jquery": "^1.11.3",
     "gulp-markdown": "^1.2.0",
 	"gulp-inject": "^4.2.0",
-	"gulp-concat-util": "^0.5.5"
+	"gulp-concat-util": "^0.5.5",
+	"merge-stream": "^1.0.1"
   },
   "repository": {
     "type": "git",

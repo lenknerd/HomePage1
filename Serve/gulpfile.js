@@ -5,6 +5,7 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var merge = require('merge-stream');
 var pkg = require('./package.json');
 
 var postPages = require('./js/ppg-compiler.js');
@@ -18,9 +19,9 @@ gulp.task('pagepostprocess', function() {
 	// This turns the markdown into view html
 	var str1 = postPages.markdownToTemplates();
 	// Then we inject header/footer to actual page pages and send
-	var str2 = postPages.
+	var str2 = postPages.insertHFAndSendPageHTMLs();
 
-	return str1;
+	return merge(str1, str2);
 });
 
 // Set the banner content

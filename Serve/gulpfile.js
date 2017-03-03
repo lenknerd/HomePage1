@@ -15,7 +15,12 @@ var pubRoot = '/var/www/lenknerd2.com/Serve/';
 
 // Task for processing the posts and making the pages
 gulp.task('pagepostprocess', function() {
-	return postPages.runTaskAndReturnPipe();
+	// This turns the markdown into view html
+	var str1 = postPages.markdownToTemplates();
+	// Then we inject header/footer to actual page pages and send
+	var str2 = postPages.
+
+	return str1;
 });
 
 // Set the banner content
@@ -82,7 +87,7 @@ gulp.task('copy', function() {
 // Publish any other non-processed files to apache directory (wait until posts done)
 gulp.task('publ', ['pagepostprocess'], function() {
 
-	pageFrameInj.injectHeaderFooter(['index.html', 'about.html', 'contact.html'])	
+	pageFrameInj.injectHeaderFooter(gulp.src(['index.html', 'about.html', 'contact.html']))
 		.pipe(gulp.dest(pubRoot));
 
 	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js'])

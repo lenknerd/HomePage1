@@ -19,10 +19,18 @@ Include:
 * date (displayed and used for sorting)
 * title (displayed on list page)
 * sub-heading description (displayed on list page)
-* filename (url from that, since will all be in /posts)
+* mainhtml-filename (url from that, since will all be in /posts, and view html sep but also based on)
 * author (can all be me for now #DEFER)
 * categories (array of strings for topics it relates to #DEFER)
 * permission-type (string to use to determine whether to display based on log-in #DEFER)
+
+So, post structure is;
+
+* a body view file, created from markdown
+	* this has insertion points for header and footer
+	* also has definition of the above stuff
+* a mainhtml for the post, which has js to load in source via Underscore tpl
+
                
 ### Write Posts (Just Core)
 

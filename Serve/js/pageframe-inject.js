@@ -7,9 +7,8 @@ var inject = require('gulp-inject');
 
 // Public items to be used in gulpfile.js
 module.exports = {
-	injectHeaderFooter: function () {
-		return gulp.src(['index.html', 'about.html', 'contact.html'])
-			.pipe(inject(gulp.src(['./html-snippets/head.html']), {
+	injectHeaderFooter: function (stream) {
+		return stream.pipe(inject(gulp.src(['./html-snippets/head.html']), {
 				starttag: '<!-- inject:head:html -->',
 				relative: true,
 				transform: function (filePath, file) {
@@ -26,5 +25,3 @@ module.exports = {
 	}
 
 };
-
-// Internal Functions

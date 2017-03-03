@@ -5,6 +5,7 @@
 var gulp = require('gulp');
 var markdown = require('gulp-markdown');
 var concat = require('gulp-concat-util');
+var flatten = require('gulp-flatten');
 var pageFrameInj  = require('./pageframe-inject.js');
 
 
@@ -23,6 +24,13 @@ module.exports = {
 	insertHFAndSendPageHTMLs: function(publishRootDir) {
 		return pageFrameInj.injectHeaderFooter(gulp.src('posts/*.html'))
 			.pipe(gulp.dest(publishRootDir + 'posts'));
+	},
+
+	// Takes supporting images and puts them in img
+	publishSupportImg: function(publishRootDir) {
+		return gulp.src(['posts/**/*.jpg','posts/**/*.png','posts/**/*.svg'])
+			.pipe(flatten())
+			.pipe(gulp.dest(publishRootDir + 'img'));
 	}
 	
 };

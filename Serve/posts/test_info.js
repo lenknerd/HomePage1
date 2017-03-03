@@ -4,5 +4,6 @@ var postInfo = {
 	date: '2017-3-2',
 	author: 'David Lenkner',
 	categories: ['junk'],
+	headerImg: 'post-bg.jpg',
 	name: 'test'
-}
+};

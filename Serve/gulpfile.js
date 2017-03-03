@@ -20,8 +20,13 @@ gulp.task('pagepostprocess', function() {
 	var str1 = postPages.markdownToTemplates(pubRoot);
 	// Then we inject header/footer to actual page pages and send
 	var str2 = postPages.insertHFAndSendPageHTMLs(pubRoot);
+	// Put the post info js in posts folder for publishing
+	var str3 = gulp.src('posts/*.js')
+		.pipe(gulp.dest(pubRoot + 'posts'));
+	// Put the post images in folder for publishing
+	var str4 = postPages.publishSupportImg(pubRoot);
 
-	return merge(str1, str2);
+	return merge(str1, str2, str3, str4);
 });
 
 // Set the banner content
@@ -58,7 +63,7 @@ gulp.task('minify-css', ['less'], function() {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src(['js/clean-blog.js','post-load.js'])
+    return gulp.src(['js/clean-blog.js'])
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
@@ -91,7 +96,7 @@ gulp.task('publ', ['pagepostprocess'], function() {
 	pageFrameInj.injectHeaderFooter(gulp.src(['index.html', 'about.html', 'contact.html']))
 		.pipe(gulp.dest(pubRoot));
 
-	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js'])
+	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js', 'js/post-load.js'])
 		.pipe(gulp.dest(pubRoot + 'js'));
 
 	gulp.src('php/*')

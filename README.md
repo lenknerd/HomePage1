@@ -23,6 +23,7 @@ Include:
 * author (can all be me for now #DEFER)
 * categories (array of strings for topics it relates to #DEFER)
 * permission-type (string to use to determine whether to display based on log-in #DEFER)
+* header pic source
 
 So, post structure is;
 

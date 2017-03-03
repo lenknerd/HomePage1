@@ -38,7 +38,7 @@ gulp.task('less', function() {
     return gulp.src('less/clean-blog.less')
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest(pubRoot + 'css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -49,7 +49,7 @@ gulp.task('minify-css', ['less'], function() {
     return gulp.src('css/clean-blog.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest(pubRoot + 'css')) // in publ dir or not?
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -58,11 +58,11 @@ gulp.task('minify-css', ['less'], function() {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('js/clean-blog.js')
+    return gulp.src(['js/clean-blog.js','post-load.js'])
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('js'))
+        .pipe(gulp.dest(pubRoot + 'js')) // in publ dir or not?
         .pipe(browserSync.reload({
             stream: true
         }))

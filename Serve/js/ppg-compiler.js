@@ -11,18 +11,18 @@ var pageFrameInj  = require('./pageframe-inject.js');
 // Public items to be used in gulpfile.js
 module.exports = {
 	// Takes markdown and turns to templates to be loaded via Underscore
-	markdownToTemplates: function() {
+	markdownToTemplates: function(publishRootDir) {
 		return gulp.src('posts/*.md')
 			.pipe(markdown()) // Turns markdown into html
 			.pipe(concat.header('<div id="postdiv">')) // Views like to be wrapped in div
 			.pipe(concat.footer('</div>'))
-			.pipe(gulp.dest('posts'));
+			.pipe(gulp.dest(publishRootDir + 'posts'));
 	},
 
 	// Takes pages, injects headers and footers
-	insertHFAndSendPageHTMLs: function() {
+	insertHFAndSendPageHTMLs: function(publishRootDir) {
 		return pageFrameInj.injectHeaderFooter(gulp.src('posts/*.html'))
-			.pipe(gulp.dest('posts'));
+			.pipe(gulp.dest(publishRootDir + 'posts'));
 	}
 	
 };

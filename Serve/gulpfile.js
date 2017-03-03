@@ -17,9 +17,9 @@ var pubRoot = '/var/www/lenknerd2.com/Serve/';
 // Task for processing the posts and making the pages
 gulp.task('pagepostprocess', function() {
 	// This turns the markdown into view html
-	var str1 = postPages.markdownToTemplates();
+	var str1 = postPages.markdownToTemplates(pubRoot);
 	// Then we inject header/footer to actual page pages and send
-	var str2 = postPages.insertHFAndSendPageHTMLs();
+	var str2 = postPages.insertHFAndSendPageHTMLs(pubRoot);
 
 	return merge(str1, str2);
 });
@@ -93,9 +93,6 @@ gulp.task('publ', ['pagepostprocess'], function() {
 
 	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js'])
 		.pipe(gulp.dest(pubRoot + 'js'));
-
-	gulp.src('posts/*.html')
-		.pipe(gulp.dest(pubRoot + 'posts'));
 
 	gulp.src('php/*')
 		.pipe(gulp.dest(pubRoot + 'php'));

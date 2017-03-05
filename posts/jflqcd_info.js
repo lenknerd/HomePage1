@@ -6,6 +6,6 @@ var postInfo = {
 	date: '2013-2-2',
 	author: 'David Lenkner',
 	categories: ['physics','computing'],
-	headerImg: 'flock-bg.jpg',
+	headerImg: 'jflqcd-bg.jpg',
 	name: 'jflqcd'
 };

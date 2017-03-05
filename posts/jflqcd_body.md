@@ -7,9 +7,9 @@ This article describes Lattice QCD in what I hope is an accesible way, and discu
 For those interested in more technical detail, a list of my publications may be found [here](#).
 <!-- To do; put in the actual link! -->
 
-# A Jargon-Free Introduction to Lattice QCD
+## A Jargon-Free Introduction to Lattice QCD
 
-<img src="img/blowups.gif" style="margin:5px;" align="right" width="250px"/>
+<img src="/img/blowups.gif" style="margin:5px;" align="right" width="250px"/>
 
 If you were to look very, *very* closely at any of the matter in the world around you, you would find that it is made of tiny bits of stuff called atoms.
 Zooming in even further, into the atoms' cores, you would then find that these are made up of even smaller bits of stuff called protons and neutrons.
@@ -35,7 +35,7 @@ To see what is so difficult about strongly interacting systems, let's look at a 
 First, for contrast, let's look at a weakly interacting system; say, this group of cats.
 
 <div align="center">
-<img src="img/cats_together.jpg" alt="Image Not Available" style="" align="center" width="300px">
+<img src="/img/cats_together.jpg" alt="Image Not Available" style="" align="center" width="300px">
 </div>
 
 None of them seems to care very much what the others are doing.
@@ -43,7 +43,7 @@ So if we know that a cat on its own spends 1/3 of its time going one way, 1/3 of
 There may actually be some limited interactions between them, but it is a decent starting point to assume they move independently, and then make small corrections to that.
 In physics this is often referred to as "perturbation theory", and it can be done via pencil-and-paper calculations.
 
-<img src="img/fish_tornado_cropped.jpg" style="margin:15px" align="right" width="200px">
+<img src="/img/fish_tornado_cropped.jpg" style="margin:15px" align="right" width="200px">
 
 On the other hand, the school of fish at right constitute a strongly interacting system; each fish makes most of its motion decisions based on the actions of its neighbors.
 For instance, each fish's instincts may be something like "If my neighbor on the left is further than my neighbor on the right, I move left, and vice versa."
@@ -58,22 +58,21 @@ In fact, just this sort of model has been used to study the movement of fish sch
 Very fast-moving quarks, such as those in high energy physics experiments, behave like those cats: they have some small interactions, but nothing much compared to their own impetus for zipping by each other and doing whatever they would do on their own.
 They are relatively weakly interacting, and thus relatively easy to model.
 But quarks in an everyday proton or neutron are more like those fish; they interact very strongly, and their behavior is very different than it would be on their own.
-Thus it is useful to model these systems of quarks and gluons on a computer.<sup>2</sup>
+Thus it is useful to model these systems of quarks and gluons on a computer.
 
-<img align="left" src="img/lgt_sugar0.jpg" style="margin:15px" width="130px">
+<img align="left" src="/img/lgt_sugar0.jpg" style="margin:15px" width="180px">
 
 There are still a many difficulties with these models, especially relating to the fact that computers can only deal with a finite number of spatial points.
 Continuous space must be approximated by a "lattice" of points (hence Lattice QCD), like the grid of pixels on your computer.
-The more points, the more "realistic" the model looks, but this makes the computations more complicated and they take longer to run -- many of these simulations run over the course of many months, even on supercomputers with hundreds or thousands of cores!
-But despite challenges, Lattice QCD has provided excellent predictions about properties of bound states of quarks and gluons, confirming that QCD is the right theory, and improving our understanding of how quarks and gluons make up the matter around us.
+The more points, the more "realistic" the model looks, but at the expense of cost and complication.
+Lattice QCD researches innovate to push the boundaries of efficiency in these simulations, then also find the most powerful computers available to utilize in running the programs.
+Our simulations ran on hundreds or thousands of cores at supercomputers such as [Stampede at the Texas Advanced Computing Center](https://www.tacc.utexas.edu/stampede/).
+
+With these techniques, Lattice QCD has provided excellent predictions about properties of bound states of quarks and gluons, confirming that QCD is the right theory, and improving our understanding of how quarks and gluons make up the matter around us.
 
 <!-- Footnote Section -->
 <font size="3">
 
 <sup>1</sup>That is far as we know, of course - we haven't discovered anything smaller yet.
-
-<sup>2</sup>I had mentioned that three quarks come together to form a proton or neutron; but three is not that many, not like the hundreds or thousands of fish in the school - why do we still need computers to simulate these?
-The answer lies in one of those "weird quantum" effects;
-when protons and neutrons are close together, there is actually a swarm of gluons and quarks popping in and out of nothingness all around them, then disappearing back, so that many more than three quarks are actually involved!
 
 </font>

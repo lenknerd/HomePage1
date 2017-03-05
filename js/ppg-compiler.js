@@ -28,7 +28,7 @@ module.exports = {
 
 	// Takes supporting images and puts them in img
 	publishSupportImg: function(publishRootDir) {
-		return gulp.src(['posts/**/*.jpg','posts/**/*.png','posts/**/*.svg'])
+		return gulp.src(['posts/**/*.jpg','posts/**/*.png','posts/**/*.svg','posts/**/*.gif'])
 			.pipe(flatten())
 			.pipe(gulp.dest(publishRootDir + 'img'));
 	}

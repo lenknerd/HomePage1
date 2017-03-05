@@ -1,12 +1,12 @@
 {
-  "name": "clean-blog",
-  "title": "Clean Blog",
-  "version": "3.3.7+1",
-  "homepage": "http://startbootstrap.com/template-overviews/clean-blog",
-  "author": "Start Bootstrap",
+  "name": "lenknerd-homepage",
+  "title": "HomePage1",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lenknerd/HomePage1",
+  "author": "David Lenkner",
   "license": {
     "type": "MIT",
-    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+    "url": "https://github.com/lenknerd/HomePage1/LICENSE"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
@@ -27,6 +27,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-clean-blog.git"
+    "url": "https://github.com/lenknerd/HomePage1.git"
   }
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- inject:head:html -->
+<!-- endinject -->
+
+<!-- Log in with username and password -->
+
+
+                <p>Enter your username and password to log in.</p>
+                <form name="logInForm" id="logInForm" novalidate>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Username</label>
+                            <input type="text" class="form-control" placeholder="Username" id="username" required data-validation-required-message="Please enter your user name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your password.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+
+				</form>
+
+
+
+
+<!-- inject:foot:html -->
+<!-- endinject -->
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/log_in.js"></script>
+
+<script type="text/javascript">
+	// BG image
+	$(".intro-header").css("background-image", "url(/img/main-bg-hmbridge_export2.jpg)");
+	// Replace contents of #post-title and #post-subtitle nodes
+	$("#post-title").text('Log In');
+	$("#post-subtitle").text('Utility Page Access');
+
+</script>
+
+
+</body>
+
+</html>

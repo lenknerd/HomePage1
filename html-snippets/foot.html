@@ -53,3 +53,10 @@
 <!-- Theme JavaScript -->
 <script src="/js/clean-blog.min.js"></script>
 
+<!-- Make the log-in menu link to https-protocol version -->
+<script type="text/javascript">
+	// Get current window location but httpS it
+	var loca = window.location.href;	
+	var root_https = loca.split('.com')[0].replace('http:','https:') + '.com';
+	$("#menuauthlink").attr("href", root_https + '/auth.html');
+</script>

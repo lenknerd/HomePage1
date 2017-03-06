@@ -93,10 +93,10 @@ gulp.task('copy', function() {
 // Publish any other non-processed files to apache directory (wait until posts done)
 gulp.task('publ', ['pagepostprocess'], function() {
 
-	pageFrameInj.injectHeaderFooter(gulp.src(['index.html', 'about.html', 'contact.html']))
+	pageFrameInj.injectHeaderFooter(gulp.src(['index.html', 'about.html', 'contact.html', 'auth.html']))
 		.pipe(gulp.dest(pubRoot));
 
-	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js', 'js/post-load.js'])
+	gulp.src(['js/jqBootstrapValidation.js','js/contact_me.js', 'js/post-load.js', 'js/log_in.js'])
 		.pipe(gulp.dest(pubRoot + 'js'));
 
 	gulp.src('php/*')

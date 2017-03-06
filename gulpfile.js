@@ -104,6 +104,7 @@ gulp.task('publ', ['pagepostprocess'], function() {
 
 	gulp.src('img/*')
 		.pipe(gulp.dest(pubRoot + 'img'));
+
 });
 
 // Run everything

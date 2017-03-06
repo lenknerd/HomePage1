@@ -3,7 +3,7 @@ Lattice QCD is a type of "computational physics", or physics which is investigat
 This may be an unfamiliar idea to some - the conventional idea of physics is that it involves either equations scribbled on blackboards, or large experiments like the particle accelerators that received so much press recently.
 Where does computer programming come in?
 
-This article describes Lattice QCD in what I hope is an accesible way, and discusses why computer programming is the best tool available for making progress in this area of physics.
+This article describes Lattice QCD in what I hope is an accessible way, and discusses why computer programming is the best tool available for making progress in this area of physics.
 For those interested in more technical detail, a list of my publications may be found [here](#).
 <!-- To do; put in the actual link! -->
 
@@ -65,7 +65,7 @@ Thus it is useful to model these systems of quarks and gluons on a computer.
 There are still a many difficulties with these models, especially relating to the fact that computers can only deal with a finite number of spatial points.
 Continuous space must be approximated by a "lattice" of points (hence Lattice QCD), like the grid of pixels on your computer.
 The more points, the more "realistic" the model looks, but at the expense of cost and complication.
-Lattice QCD researches innovate to push the boundaries of efficiency in these simulations, then also find the most powerful computers available to utilize in running the programs.
+Lattice QCD researchers innovate to push the boundaries of efficiency in these simulations, then also find the most powerful computers available to utilize in running the programs.
 Our simulations ran on hundreds or thousands of cores at supercomputers such as [Stampede at the Texas Advanced Computing Center](https://www.tacc.utexas.edu/stampede/).
 
 With these techniques, Lattice QCD has provided excellent predictions about properties of bound states of quarks and gluons, confirming that QCD is the right theory, and improving our understanding of how quarks and gluons make up the matter around us.

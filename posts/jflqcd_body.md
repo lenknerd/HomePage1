@@ -1,5 +1,5 @@
 My doctoral work at Carnegie Mellon University was in a sub-field of Physics calling *Lattice QCD*.
-Lattice QCD is a type of "computational physics", or physics which is investigated primarily using computer simulations.
+Lattice QCD is a type of "computational physics," or physics which is investigated primarily using computer simulations.
 This may be an unfamiliar idea to some - the conventional idea of physics is that it involves either equations scribbled on blackboards, or large experiments like the particle accelerators that received so much press recently.
 Where does computer programming come in?
 
@@ -17,7 +17,7 @@ And finally, at the very bottom<sup>1</sup> of the "bits-of-stuff" hierarchy, th
 
 It turns out that describing quark and gluon binding is extremely tricky business in physics, much more so than similar binding phenomena at larger scales.
 For instance, if you and a friend hold hands and step on a scale together, you find (not surprisingly) that your combined weight is the sum of your individual weights.
-However, if three quarks "grab hold of each other" to form a proton or neutron, the combined partcile weighs more than a **hundred times** the sum of their individual weights!
+However, if three quarks "grab hold of each other" to form a proton or neutron, the combined particle weighs more than a **hundred times** the sum of their individual weights!
 
 This mysterious "extra mass" acquired through binding is actually the origin of most of the mass in our world, far more than the famed Higgs mechanism.
 But where does this extra mass come from, and why does it arise when quarks get together and interact?
@@ -41,7 +41,7 @@ First, for contrast, let's look at a weakly interacting system; say, this group 
 None of them seems to care very much what the others are doing.
 So if we know that a cat on its own spends 1/3 of its time going one way, 1/3 of its time going another way, 1/4 of its time eating, etc., then we can guess what a group of them will look like: about 1/3 of the cats will be going one way, 1/4 of them will be eating, and so on.
 There may actually be some limited interactions between them, but it is a decent starting point to assume they move independently, and then make small corrections to that.
-In physics this is often referred to as "perturbation theory", and it can be done via pencil-and-paper calculations.
+In physics this is often referred to as "perturbation theory," and it can be done via pencil-and-paper calculations.
 
 <img src="/img/fish_tornado_cropped.jpg" style="margin:15px" align="right" width="200px">
 

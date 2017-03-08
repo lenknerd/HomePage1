@@ -8,7 +8,7 @@ The details follow, and there's a lot - it's the first chance I've had to really
 ## The ProtoHype Competition
 
 Tech Shop Pittsburgh and CTSI teamed up to organize the ProtoHype competition, with the idea of combining CTSI's understanding of what needs there are in the medical field, and Tech Shop Pittsburgh's extensive local facility for design and fabrication, and their maker-minded membership base.
-The idea is that teams at the CTSI would propose problem statements in the field of biomedicine.
+The idea is that teams at the CTSI would identify challenges in the field of biomedicine that could be solved by potential products.
 They would then pair with a team of Tech Shop members to create a prototype product to address that need.
 After prototypes were built, they would be presented and judged by Tech Shop and CTSI staff for technical merit, ability for commercialization, and potential benefit to patients/outpatients or other users.
 
@@ -18,53 +18,63 @@ We worked with Dr. Kevin Bell and his group in the University of Pittsburgh bioe
 They work with precision motion capture units (accelerometers, magnetometers, and gyroscopes) combined into an IMU, or intertial measurement unit, that allow precise characterization of patients body movements during physical therapy.
 These help doctors and patients ensure they are performing exercises correctly, but the devices are difficult to calibrate - thus the need for an automated calibration procedure.
 
-Here's Dr. Bell's team's own statement of the problem, posted early in the Protohype competition;
+Here's Dr. Bell's team's own statement of the challenge, posted early in the Protohype competition;
 
-<iframe width="400" height="305"
+<iframe width="400" height="305" align="center"
 src="https://www.youtube.com/embed/96xLXqTQkO8">
 </iframe>
 
-We responded at the pairing phase with a pitch for our expertise at solving this sort of automation problem, and our proposed attack on a solution.
-Here's Tim Nolan, our team lead;
+We responded with a proposed solution, and we were selected as one of the teams to create a solution to automate the calibration procedure.
 
-<iframe src="https://drive.google.com/file/d/0B9aM7kLnVl_mMjN3YTF6MnczLUk/preview" width="640" height="480"></iframe>
-<!-- https://drive.google.com/open?id=0B9aM7kLnVl_mMjN3YTF6MnczLUk -->
+<!-- Leaving out for now, too much video content w/ above
+<iframe src="https://drive.google.com/file/d/0B9aM7kLnVl_mMjN3YTF6MnczLUk/preview" width="640" height="360"></iframe>
+-->
 
 ## Mechanical Design and Build
 
-To be continued...
+In order to automate the calibration, we designed a three-axis rotator that would align the IMU to various positions at which readings were necessary.
+Readings would be taken via a Bluetooth interface provided by the IMU's manufacturer, [YEI](https://yostlabs.com/).
+The readings would then be used to choose calibration coefficients to download to the device's on-board memory.
 
-<!-- 
-- Architecture
-- Fusion360
-- 3D Printed Parts with Max Repeated Use
-- Fritzing
-- Arduinos
-- 3D Printing
-- Soldering Headers Etc
-- Redmine and Bitbucket Tracking
--->
+The mechanical design was done in [AutoDesk Fusion 360](http://www.autodesk.com/products/fusion-360/overview?mktvar002=698238&mkwid=szK6QE0U2|pcrid|177331758407|pkw|fusion%20360|pmt|e|pdv|c|&&gclid=COKKlLPuxdICFQKHswodTaoK9g), a cloud-based 3D CAD/CAM package available on the Tech Shop computers.
+We limited part size to the print area of the 3D printers at the Tech Shop, and made as many duplicate parts as possible to make replacement easier.
 
-## Programming
+<div align="center">
+<img src="/img/protohype-design-screenshot.png" alt="Image Not Available" style="" align="center" width="500px">
+</div>
 
-To be continued...
-<!-- 
-- Arduino Sketches, Interrupts
-- C Interface to IMU
-- LabVIEW GUI and Integration
--->
+Electrical design was done using [Fritzing](http://fritzing.org/home/), an open-source package that builds in pinouts on many common boards including Arduinos.
+We utilized [Arduinos Micros](https://www.arduino.cc/en/Main/ArduinoBoardMicro) for low-level motor control.
+These are inexpensive enough that it made sense to purchase three, one for each axis control, so as to be able to utilize sufficient interrupts on the Arduino for better timing performance per motor.
+
+Serial commands were passed to these Arduinos via USB connection to a PC running the calibration interface and sequencer program.
+The main sequencer and GUI was written in NI LabVIEW (code snapshot below), a graphical programming interface directed towards rapid prototyping, integration, and GUI development.
+
+<div align="center">
+<img src="/img/IMU-Main-BD.png" alt="Image Not Available" style="" align="center" width="400pxi">
+</div>
+
+The code to directly interface to the IMU was written in C and compiled into a shared library to be called by LabVIEW.
+Here's a screenshot of the main calibration GUI;
+
+<div align="center">
+<img src="/img/IMU-Main-FP.png" alt="Image Not Available" style="" align="center" width="400pxi">
+</div>
 
 ## The Result
 
+The end product worked swimmingly!
+Here's a short clip of the system in operation; you can see after each rotation sequence, the light on the IMU flashes to indicate readings are being taken via the Bluetooth connection.
 
-Need to edit this down...
+<iframe width="640" height="380" align="center"
+src="https://drive.google.com/file/d/0B9aM7kLnVl_mSGRUeS00RkF5SWM/preview"></iframe>
+<!-- Edit this down! -->
 
-<iframe src="https://drive.google.com/file/d/0B9aM7kLnVl_mSGRUeS00RkF5SWM/preview" width="640" height="480"></iframe>
+The result is a well-calibrated IMU device without the time-intensive work of rotating repeatedly (24 times) carefully to the right positions and taking measurements at each, avoiding potential for human error.
 
-To be continued...
+Unfortunately, our submission didn't win the overall competition - there were a lot of excellent entries, kudos to the many great competitors in the Protohype challenge.
+But in the "apples-to-apples" comparison, we did have the submission that Dr. Bell was most happy with, and we've even been discussing some other potential automation projects we may tackle with his group.
+And we made it far enough in the competition to be awarded yearlong memberships to Tech Shop Pittsburgh, a pretty fantastic value!
 
-<!--
-- Potential Improvements
-- Didn't Win... Great Entries, Well Done to Them
-- Happy With Results Plan To Use
--->
+It was a great experience all around - fun, edifying, with a useful product at the conclusion!
+Many thanks to all involved - CTSI, Tech Shop Pittsburgh, Dr. Kevin Bell and his group, Nick Leyder at YEI labs for his help with their Bluetooth connection protocol, and especially to my teammates on the project, Wil Hamilton, Chris Mullin, and Tim Nolan.

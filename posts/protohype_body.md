@@ -10,7 +10,8 @@ The details follow, and there's a lot - it's the first chance I've had to really
 Tech Shop Pittsburgh and CTSI teamed up to organize the ProtoHype competition, with the idea of combining CTSI's understanding of what needs there are in the medical field, and Tech Shop Pittsburgh's extensive local facility for design and fabrication, and their maker-minded membership base.
 The idea is that teams at the CTSI would identify challenges in the field of biomedicine that could be solved by potential products.
 They would then pair with a team of Tech Shop members to create a prototype product to address that need.
-After prototypes were built, they would be presented and judged by Tech Shop and CTSI staff for technical merit, ability for commercialization, and potential benefit to patients and caregivers.
+After prototypes were built, they would be presented and judged by Tech Shop and CTSI staff for technical merit and potential benefit to patients and caregivers.
+The winner would receive a grant to aid in continued development and commercialization.
 
 ## Our Challenge
 

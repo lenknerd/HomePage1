@@ -16,7 +16,7 @@ The winner would receive a grant to aid in continued development and commerciali
 ## Our Challenge
 
 We worked with Dr. Kevin Bell and his group in the University of Pittsburgh bioengineering department, including Marcus Allen and Chukwudi Onyeukwu.
-They work with precision motion capture units (accelerometers, magnetometers, and gyroscopes) combined into an IMU, or intertial measurement unit, that allow precise characterization of patients body movements during physical therapy.
+They use precision motion capture units (accelerometers, magnetometers, and gyroscopes) combined into intertial measurement units (IMUs) to precisely characterize patients' body movements during physical therapy.
 These help doctors and patients ensure they are performing exercises correctly, but the devices are difficult to calibrate - thus the need for an automated calibration procedure.
 
 Here's Dr. Bell's team's own statement of the challenge, posted early in the Protohype competition;

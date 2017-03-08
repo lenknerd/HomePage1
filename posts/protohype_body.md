@@ -2,7 +2,7 @@ I recently participated in [Protohype Pittsburgh](http://www.ctsi.pitt.edu/fundi
 Along with a few of my coworkers from [DSA](http://dsautomation.com/) and a biomedical research team at Pitt, we designed and built a product prototype for entry into this friendly outside-of-work competition.
 Our product was an automatic calibration system for physical therapy motion tracking units.
 
-It was a fantastic experience - a chance to showcase my professional skills, meet a great group of researchers and makers in the Pittsburgh area, put together a neat and potentially impactful product, all with a pretty sweet return on the investment - a year membership and classes at Tech Shop Pittsburgh.
+It was a fantastic experience - a chance to showcase my professional skills, meet a great group of researchers and makers in the Pittsburgh area, put together a neat and potentially impactful product, all with a pretty sweet reward at the end.
 The details follow, and there's a lot - it's the first chance I've had to really pull everything together and summarize the completed project, so I went for it here.
 
 ## The ProtoHype Competition
@@ -40,11 +40,11 @@ The mechanical design was done in [AutoDesk Fusion 360](http://www.autodesk.com/
 We limited part size to the print area of the 3D printers at the Tech Shop, and made as many duplicate parts as possible to make replacement easier.
 
 <div align="center">
-<img src="/img/protohype-design-screenshot.png" alt="Image Not Available" style="" align="center" width="500px">
+<img src="/img/protohype-design-screeenshot.png" alt="Image Not Available" style="" align="center" width="500px">
 </div>
 
 Electrical design was done using [Fritzing](http://fritzing.org/home/), an open-source package that builds in pinouts on many common boards including Arduinos.
-We utilized [Arduinos Micros](https://www.arduino.cc/en/Main/ArduinoBoardMicro) for low-level motor control.
+We utilized [Arduino Micros](https://www.arduino.cc/en/Main/ArduinoBoardMicro) for low-level motor control.
 These are inexpensive enough that it made sense to purchase three, one for each axis control, so as to be able to utilize sufficient interrupts on the Arduino for better timing performance per motor.
 
 Serial commands were passed to these Arduinos via USB connection to a PC running the calibration interface and sequencer program.
@@ -64,17 +64,17 @@ Here's a screenshot of the main calibration GUI;
 ## The Result
 
 The end product worked swimmingly!
-Here's a short clip of the system in operation; you can see after each rotation sequence, the light on the IMU flashes to indicate readings are being taken via the Bluetooth connection.
+Here's a video of the system in operation; it's lengthy, but a few things to note are A) the orientation pictures on the GUI match with each successive calibration positions, B) the LED flashes once in position for visible indication that the calibration readings happen when the positioning is complete, and C) there's a pretty cool turn at around 1:15 if you want to skip right to that.
 
 <iframe width="640" height="380" align="center"
 src="https://drive.google.com/file/d/0B9aM7kLnVl_mSGRUeS00RkF5SWM/preview"></iframe>
-<!-- Edit this down! -->
 
-The result is a well-calibrated IMU device without the time-intensive work of rotating repeatedly (24 times) carefully to the right positions and taking measurements at each, avoiding potential for human error.
+The process could use some tweaks if we get a chance - quicker moves by tweaking motor control, for example.
+But the result is a well-calibrated IMU device without the time-intensive work of rotating repeatedly (24 times) carefully to the right positions and taking measurements at each, avoiding potential for human error.
 
 Unfortunately, our submission didn't win the overall competition - there were a lot of excellent entries, kudos to the many great competitors in the Protohype challenge.
 But in the "apples-to-apples" comparison, we did have the submission that Dr. Bell was most happy with, and we've even been discussing some other potential automation projects we may tackle with his group.
 And we made it far enough in the competition to be awarded yearlong memberships to Tech Shop Pittsburgh, a pretty fantastic value!
 
 It was a great experience all around - fun, edifying, with a useful product at the conclusion!
-Many thanks to all involved - CTSI, Tech Shop Pittsburgh, Dr. Kevin Bell and his group, Nick Leyder at YEI labs for his help with their Bluetooth connection protocol, and especially to my teammates on the project, Wil Hamilton, Chris Mullin, and Tim Nolan.
+Many thanks to all involved; CTSI, Tech Shop Pittsburgh, Dr. Kevin Bell and his group, Nick Leyder at YEI labs for his help with their Bluetooth connection protocol, and especially to my teammates on the project, Wil Hamilton, Chris Mullin, and Tim Nolan.

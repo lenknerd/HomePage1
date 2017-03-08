@@ -4,7 +4,7 @@ This may be an unfamiliar idea to some - the conventional idea of physics is tha
 Where does computer programming come in?
 
 This article describes Lattice QCD in what I hope is an accessible way, and discusses why computer programming is the best tool available for making progress in this area of physics.
-For those interested in more technical detail, a list of my publications may be found [here](#).
+For those interested in more technical detail, a list of my publications may be found [here](/posts/pubs_main.html).
 <!-- To do; put in the actual link! -->
 
 ## A Jargon-Free Introduction to Lattice QCD

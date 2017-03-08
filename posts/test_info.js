@@ -5,5 +5,6 @@ var postInfo = {
 	author: 'David Lenkner',
 	categories: ['junk'],
 	headerImg: 'post-bg.jpg',
-	name: 'test'
+	name: 'test',
+	link: true
 };

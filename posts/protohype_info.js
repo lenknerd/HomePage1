@@ -7,5 +7,6 @@ var postInfo = {
 	author: 'David Lenkner',
 	categories: ['engineering','programming','design','integration'],
 	headerImg: 'protohype-design-bg.jpg',
-	name: 'protohype'
+	name: 'protohype',
+	link: true
 };

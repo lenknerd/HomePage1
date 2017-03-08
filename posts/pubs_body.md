@@ -1,8 +1,7 @@
 ## Teaching
 
-Teaching has always been rewarding for me, not least because I always seem to learn almost as much in the process as my students do.
-Here's a few course topics I've taught in the past, not just related to physics but at DSA as well.
-I am a [Certified Professional Instructor](http://sine.ni.com/nips/cds/view/p/lang/en/nid/10641) with National Instruments, and DSA teaches clients as part of our empowerment-focuses systems integration work.
+I've always found teaching rewarding, not least because between preparation and discussion and insightful questions, I often learn just as much as my students do in the process.
+Below are some course topics I've taught as a [Certified Professional Instructor](http://sine.ni.com/nips/cds/view/p/lang/en/nid/10641) with National Instruments through DSA (my current workplace);
 
 * Data Acquisition and Signal Condition
 * Machine Vision
@@ -16,10 +15,10 @@ I taught or TA'd these classes in the undergraduate Physics department at Carneg
 * Physics II for Engineering Students (33-107)
 * Energy and Environmental Issues (33-115), a general-audience course covering the physics behind energy consumption and generation, and its impact on our world
 
-In addition to these undergraduate courses, I have also worked as a teacher and mentor for younger students, including at
+In addition to those courses, I have also worked as a teacher and mentor for younger students, including at
 
-* Carnegie Mellon's [SAMS Program](https://admission.enrollment.cmu.edu/pages/diversity-sams) for high school students from groups traditionally underrepresented or underserved in STEM fields, and
-* [Summerbridge Pittsburgh](https://www.sewickley.org/page/summerbridge), a summer educational enrichment program for at-risk Pittsburgh middle school students
+* <p>Carnegie Mellon's [SAMS Program](https://admission.enrollment.cmu.edu/pages/diversity-sams) for high school students from groups traditionally underrepresented or underserved in STEM fields, and</p>
+* <p>[Summerbridge Pittsburgh](https://www.sewickley.org/page/summerbridge), a summer educational enrichment program for at-risk Pittsburgh middle school students</p>
 
 ## Publications
 
@@ -34,5 +33,5 @@ Some publications of my research in physics are below; for downloads or a more u
 * C. Morningstar, A. Bell, J. Bulava, J. Foley, K. J. Juge, D. Lenkner and C. H. Wong, "Progress Report on Computing Excited-State Hadron Masses in Lattice QCD," AIP Conf. Proc. 1388, 34 (2011) [arXiv:1103.2783 [hep-lat]].
 * Morningstar, A. Bell, J. Bulava, E. Engelson, J. Foley, K. J. Juge, D. Lenkner and M. Peardon et al., "The excited hadron spectrum in lattice QCD using a new method of estimating quark propagation," AIP Conf. Proc. 1257, 779 (2010) [arXiv:1002.0818 [hep-lat]].
 
-Feel free to download a copy of my thesis <a href="" id="thesis-link">here</a>.
+My disseration can be found online through ProQuest [here](http://gradworks.umi.com/35/75/3575070.html).
 

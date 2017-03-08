@@ -7,5 +7,6 @@ var postInfo = {
 	author: 'David Lenkner',
 	categories: ['physics','computing'],
 	headerImg: 'jflqcd-bg.jpg',
-	name: 'jflqcd'
+	name: 'jflqcd',
+	link: true
 };

@@ -10,7 +10,7 @@ The details follow, and there's a lot - it's the first chance I've had to really
 Tech Shop Pittsburgh and CTSI teamed up to organize the ProtoHype competition, with the idea of combining CTSI's understanding of what needs there are in the medical field, and Tech Shop Pittsburgh's extensive local facility for design and fabrication, and their maker-minded membership base.
 The idea is that teams at the CTSI would identify challenges in the field of biomedicine that could be solved by potential products.
 They would then pair with a team of Tech Shop members to create a prototype product to address that need.
-After prototypes were built, they would be presented and judged by Tech Shop and CTSI staff for technical merit, ability for commercialization, and potential benefit to patients/outpatients or other users.
+After prototypes were built, they would be presented and judged by Tech Shop and CTSI staff for technical merit, ability for commercialization, and potential benefit to patients and caregivers.
 
 ## Our Challenge
 
@@ -40,7 +40,7 @@ The mechanical design was done in [AutoDesk Fusion 360](http://www.autodesk.com/
 We limited part size to the print area of the 3D printers at the Tech Shop, and made as many duplicate parts as possible to make replacement easier.
 
 <div align="center">
-<img src="/img/protohype-design-screeenshot.png" alt="Image Not Available" style="" align="center" width="500px">
+<img src="/img/protohype-design-screeenshot.png" alt="Image Not Available" style="" align="center" width="375px">
 </div>
 
 Electrical design was done using [Fritzing](http://fritzing.org/home/), an open-source package that builds in pinouts on many common boards including Arduinos.
@@ -66,11 +66,11 @@ Here's a screenshot of the main calibration GUI;
 The end product worked swimmingly!
 Here's a video of the system in operation; it's lengthy, but a few things to note are A) the orientation pictures on the GUI match with each successive calibration positions, B) the LED flashes once in position for visible indication that the calibration readings happen when the positioning is complete, and C) there's a pretty cool turn at around 1:15 if you want to skip right to that.
 
-<iframe width="640" height="380" align="center"
+<iframe width="420" height="260" align="center"
 src="https://drive.google.com/file/d/0B9aM7kLnVl_mSGRUeS00RkF5SWM/preview"></iframe>
 
-The process could use some tweaks if we get a chance - quicker moves by tweaking motor control, for example.
-But the result is a well-calibrated IMU device without the time-intensive work of rotating repeatedly (24 times) carefully to the right positions and taking measurements at each, avoiding potential for human error.
+The process could use some tweaks if we get a chance - quicker moves by adjusting motor position PID, for example.
+But the result was a working system to yield a well-calibrated IMU device without the time-intensive work of rotating repeatedly (24 times) carefully to the right positions and taking measurements at each, avoiding potential for human error.
 
 Unfortunately, our submission didn't win the overall competition - there were a lot of excellent entries, kudos to the many great competitors in the Protohype challenge.
 But in the "apples-to-apples" comparison, we did have the submission that Dr. Bell was most happy with, and we've even been discussing some other potential automation projects we may tackle with his group.

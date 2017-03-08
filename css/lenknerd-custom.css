@@ -1,0 +1,10 @@
+/*!
+ * lenknerd-custom.css
+ * CSS for various general items related to different posts or other pages on my site
+ * David Lenkner, 2017
+ */
+
+/* Links inside lists didn't appear with standard underline style by default */
+.dwl-list-link {
+  text-decoration: underline;
+}

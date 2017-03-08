@@ -17,8 +17,8 @@ I taught or TA'd these classes in the undergraduate Physics department at Carneg
 
 In addition to those courses, I have also worked as a teacher and mentor for younger students, including at
 
-* <p>Carnegie Mellon's [SAMS Program](https://admission.enrollment.cmu.edu/pages/diversity-sams) for high school students from groups traditionally underrepresented or underserved in STEM fields, and</p>
-* <p>[Summerbridge Pittsburgh](https://www.sewickley.org/page/summerbridge), a summer educational enrichment program for at-risk Pittsburgh middle school students</p>
+* Carnegie Mellon's <a class="dwl-list-link" href="https://admission.enrollment.cmu.edu/pages/diversity-sams">SAMS Program</a> for high school students from groups traditionally underrepresented or underserved in STEM fields, and
+* <a class="dwl-list-link" href="https://www.sewickley.org/page/summerbridge">Summerbridge Pittsburgh</a>, a summer educational enrichment program for at-risk Pittsburgh middle school students
 
 ## Publications
 

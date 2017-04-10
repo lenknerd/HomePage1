@@ -12,7 +12,7 @@ var postPages = require('./js/ppg-compiler.js');
 var pageFrameInj  = require('./js/pageframe-inject.js');
 
 // Where to publish things when all done...
-var pubRoot = '/var/www/lenknerd2.com/Serve/';
+var pubRoot = '/var/www/lenknerd.com/';
 
 // Task for processing the posts and making the pages
 gulp.task('pagepostprocess', function() {

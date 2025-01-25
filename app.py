@@ -1,6 +1,6 @@
 # Main application for web blog
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 # redirect, url_for
 
 
@@ -11,7 +11,12 @@ def create_app(test_config=None) -> Flask:
     @app.route("/")
     @app.route("/index.html")
     def home() -> str:
-        return render_template("index.html")
+        return render_template(
+            "index.html",
+            title="Welcome!",
+            subtitle="David Lenkner's home page.",
+            static_img_path=url_for("static", filename="assets/img/home-bg.jpg"),
+        )
 
     @app.route("/about.html")
     def about() -> str:
@@ -19,7 +24,7 @@ def create_app(test_config=None) -> Flask:
             "about.html",
             title="About",
             subtitle="About what? I don't know, we'll see.",
-            static_img_path="assets/img/about-bg.jpg"
+            static_img_path=url_for("static", filename="assets/img/about-bg.jpg"),
         )
 
     return app

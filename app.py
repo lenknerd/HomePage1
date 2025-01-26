@@ -14,7 +14,7 @@ def create_app(test_config=None) -> Flask:
         return render_template(
             "index.html",
             title="Welcome!",
-            subtitle="David Lenkner's home page.",
+            subtitle="You've found David Lenkner's home page.",
             static_img_path=url_for("static", filename="assets/img/home-bg.jpg"),
         )
 
@@ -22,9 +22,9 @@ def create_app(test_config=None) -> Flask:
     def about() -> str:
         return render_template(
             "about.html",
-            title="About",
-            subtitle="About what? I don't know, we'll see.",
-            static_img_path=url_for("static", filename="assets/img/about-bg.jpg"),
+            title="About Me",
+            subtitle="A bit about me... in FAQ form.",
+            static_img_path=url_for("static", filename="assets/img/about-bg.png"),
         )
 
     return app
